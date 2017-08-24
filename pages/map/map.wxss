@@ -1,0 +1,149 @@
+/* pages/map/map.wxss */
+page {
+  height: 100%;
+}
+
+.filter {
+    background-color: #f9e6ef;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 10px 0px 10px;
+    font-size: 16px;
+    color: #666666;
+    white-space: nowrap;
+    height: 100%;
+}
+
+.filter-item {
+    padding: 10px 0px 15px 0px;
+    margin-right: 20px;
+    display: inline-block;
+    height: 23px;
+}
+
+.filter-item-selected {
+    color: #ea68a2;
+    font-size: 18px;
+}
+
+.filter-item-last {
+    margin-right: 40px;
+}
+
+.bottom-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 36px;
+    height: 2px;
+    background-color: #ea68a2;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+
+.filter-border {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    background-image: url(../../resources/filter-border.png);
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+
+.map-wrap {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+.map-con {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.filter-wrap {
+    width: 100%;
+    position: relative;
+    height: 100rpx;
+    display: flex;
+    flex-direction: row;
+}
+
+.filter-campus-wrap {
+  font-size: 22rpx;
+  padding: 0 35rpx;
+  line-height: 100rpx;
+  color: #fff;
+}
+
+.filter-type-wrap {
+  flex: 1;
+  overflow: hidden;
+}
+
+.filter-campus-wrap .filter-campus-text {
+  opacity: 0.6;
+}
+
+.filter-campus-wrap .filter-campus-icon {
+  width: 18rpx;
+  height: 9rpx;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-left: 10rpx;
+}
+
+.campus-filter-open .filter-campus-text {
+  opacity: 1;
+}
+
+.filter-type-scroll {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.filter-type-item {
+  margin-right: 50rpx;
+  display: inline-block;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #fff;
+  opacity: 0.6;
+  font-size: 22rpx;
+  box-sizing: border-box;
+}
+
+.type-item-selected {
+  border-bottom: 6rpx solid #fff;
+  opacity: 1;
+}
+
+.campus-wrap {
+  height: 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.campus-title {
+  font-size: 26rpx;
+  color: #c2c2c2;
+  padding-left: 40rpx;
+  height: 105rpx;
+  line-height: 105rpx;
+}

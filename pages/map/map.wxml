@@ -1,0 +1,44 @@
+<view class="con map-con">
+  <view class="filter-wrap" style="background-color:{{clrMain}};">
+    <view class="filter-campus-wrap {{campusFilterOpenCls}}" bindtap="onToggleCampusPanel">
+      <text class="filter-campus-text">校区</text><text class="filter-campus-icon" style="background-image: url({{icMapDownArrow}})"></text>
+    </view>
+    <view class="filter-type-wrap">
+      <scroll-view class="filter-type-scroll" scroll-x="true">
+        <view class="filter-type-item type-item-selected">出入口</view>
+        <view class="filter-type-item">出入口</view>
+        <view class="filter-type-item">出入口</view>
+        <view class="filter-type-item">出入口</view>
+        <view class="filter-type-item">出入口</view>
+        <view class="filter-type-item">出入口</view>
+        <view class="filter-type-item">出入口</view>
+        <view class="filter-type-item">出入口</view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="campus-wrap" animation="{{campusPanelAnim}}">
+    <view class="campus-title">校区选择</view>
+    <scroll-view class="campus-list" scroll-x="true">
+      <view class="campus-item">
+        <image src="" class="campus-image"></image>
+        <view class="campus-name">校区A</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="map-wrap">
+    <map 
+            class="map"
+            id="map" 
+            longitude="{{centerLongitude}}" 
+            latitude="{{centerLatitude}}" 
+            scale="15" 
+            controls="{{controls}}" 
+            bindcontroltap="onControlTap" 
+            markers="{{markers}}" 
+            bindmarkertap="onMarkerTap" 
+            polyline="{{polyline}}" 
+            bindregionchange="regionchange" 
+            show-location
+    ></map>
+  </view>
+</view>
