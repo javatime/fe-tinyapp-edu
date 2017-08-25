@@ -144,6 +144,39 @@ page {
   font-size: 26rpx;
   color: #c2c2c2;
   padding-left: 40rpx;
-  height: 105rpx;
-  line-height: 105rpx;
+  height: 85rpx;
+  line-height: 85rpx;
+}
+
+.campus-list {
+  width: 100%;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.campus-list image {
+  width: 106rpx;
+  height: 106rpx;
+  border-radius: 53rpx;
+  overflow: hidden;
+  background-color: #c2c2c2;
+  margin: auto;
+}
+
+.campus-item {
+  display: inline-block;
+  color: #999999;
+  font-size: 28rpx;
+  width: 4em;
+  text-align: center;
+  margin-right: 70rpx;
+  overflow: hidden;
+}
+
+.campus-name {
+  margin-top: 15rpx;
+  white-space: normal;
+  height: 70rpx;
+  line-height: 35rpx;
 }

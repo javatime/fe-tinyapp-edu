@@ -27,5 +27,9 @@ App({
 
   globalData: {
     userInfo: null
+  },
+
+  getTheme: function() {
+    return theme;
   }
 })

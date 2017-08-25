@@ -5,24 +5,26 @@
     </view>
     <view class="filter-type-wrap">
       <scroll-view class="filter-type-scroll" scroll-x="true">
-        <view class="filter-type-item type-item-selected">出入口</view>
-        <view class="filter-type-item">出入口</view>
-        <view class="filter-type-item">出入口</view>
-        <view class="filter-type-item">出入口</view>
-        <view class="filter-type-item">出入口</view>
-        <view class="filter-type-item">出入口</view>
-        <view class="filter-type-item">出入口</view>
-        <view class="filter-type-item">出入口</view>
+
+        <block wx:for="{{types}}" wx:key="unique">
+          <view wx:if="{{index == selectedTypeIndex}}" class="filter-type-item type-item-selected" data-id="{{item.id}}" data-index="{{index}}" bindtap="onSelectType">{{item.name}}</view>
+          <view wx:else class="filter-type-item"data-id="{{item.id}}" data-index="{{index}}" bindtap="onSelectType">{{item.name}}</view>
+        </block>
       </scroll-view>
     </view>
   </view>
   <view class="campus-wrap" animation="{{campusPanelAnim}}">
     <view class="campus-title">校区选择</view>
     <scroll-view class="campus-list" scroll-x="true">
-      <view class="campus-item">
-        <image src="" class="campus-image"></image>
-        <view class="campus-name">校区A</view>
-      </view>
+
+      <block wx:for="{{campus}}" wx:key="unique">
+        <view class="campus-item" data-latitude="{{item.latitude}}" data-longitude="{{item.longitude}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="onSelectCampus">
+          <image src="{{item.bgImage}}" class="campus-image"></image>
+          <view wx:if="{{index == selectedCampusIndex}}" class="campus-name" style="font-weight:bold;color: {{clrMain}}">{{item.name}}</view>
+          <view wx:else class="campus-name">{{item.name}}</view>
+        </view>
+      </block>
+      
     </scroll-view>
   </view>
   <view class="map-wrap">
