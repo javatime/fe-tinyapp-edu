@@ -3,6 +3,17 @@
     "pages/map/map",
     "pages/spot/spot",
     "pages/index/index",
+    "pages/introduce/introduce",
+    "pages/school/school",
+    "pages/school/template/list",
+    "pages/school-detail/school-detail" ,
+    "pages/history/history",
+    "pages/history/template/list",
+    "pages/history-all/history-all",
+    "pages/history-detail/history-detail",
+    "pages/famous/famous",
+    "pages/famous/template/list",
+    "pages/famous/famous-detail/famous-detail",
     "pages/logs/logs"
   ],
   "window":{
