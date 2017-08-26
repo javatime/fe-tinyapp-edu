@@ -15,7 +15,7 @@ var user = require('./user');
 function request(obj, needLogin = true, ctx) {
     obj.success = function(res) {
         var d = res.data;
-        if (d.success) {
+        if (d.success || d.code == 'success') {
             typeof obj.realSuccess == "function" && obj.realSuccess(d.data);
         } else {
           if (needLogin && d.code == 'ACT_TOKEN_FAILURE') {

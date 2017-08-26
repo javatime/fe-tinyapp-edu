@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/timeLine/timeLine",
     "pages/map/map",
     "pages/spot/spot",
     "pages/index/index",
