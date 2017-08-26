@@ -1,0 +1,9 @@
+<!--pages/demo/demo-detial/demo-detial.wxml-->
+<view class="container">
+  <view class="title">
+    <text>{{ list.name }}</text>
+  </view>
+  <view class="context">
+    <text>{{ list.context }}</text>
+  </view> 
+</view>
