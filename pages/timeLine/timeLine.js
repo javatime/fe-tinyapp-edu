@@ -46,7 +46,7 @@ Page({
       {roleId: '', roleName: '全部'}
     ],
     publisherTypeIndex: 0,
-    listPaddingBottom: 100,
+    listPaddingBottom: 0,
     filterOpenCls: '',
     filterMoreToggle: 'onTapFilterMore',
     isFilterOpen: false
@@ -66,12 +66,14 @@ Page({
     });
 
     // 处理兼容性
+    /*
     var sysInfo = wx.getSystemInfoSync();
     if (sysInfo.system.toUpperCase().indexOf('IOS') != -1) {
       this.setData({
         listPaddingBottom: 150
       });
-    }    
+    } 
+    */   
   },
 
   onShow: function() {
@@ -221,7 +223,7 @@ Page({
       that.setData({
         scrollLeft: currentOffset
       });
-    }, 2000);
+    }, 0);
 
   },
 
@@ -298,7 +300,7 @@ Page({
         that.setData({
           scrollLeft: offset
         });
-      }, 500);
+      }, 0);
     }
   },
 

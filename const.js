@@ -14,13 +14,13 @@ var monthFormatList = [
 ];
 
 var dayFormatList = [
-  { chi: '星期天', eng: 'Sunday', simpleEng: 'Sun' },
-  { chi: '星期一', eng: 'Monday', simpleEng: 'Mon' },
-  { chi: '星期二', eng: 'Tuesday', simpleEng: 'Tues' },
-  { chi: '星期三', eng: 'Wednesday', simpleEng: 'Wed' },
-  { chi: '星期四', eng: 'Thursday', simpleEng: 'Thur' },
-  { chi: '星期五', eng: 'Friday', simpleEng: 'Fri' },
-  { chi: '星期六', eng: 'Saturday', simpleEng: 'Sat' }
+  { chi: '周日', eng: 'Sunday', simpleEng: 'Sun' },
+  { chi: '周一', eng: 'Monday', simpleEng: 'Mon' },
+  { chi: '周二', eng: 'Tuesday', simpleEng: 'Tues' },
+  { chi: '周三', eng: 'Wednesday', simpleEng: 'Wed' },
+  { chi: '周四', eng: 'Thursday', simpleEng: 'Thur' },
+  { chi: '周五', eng: 'Friday', simpleEng: 'Fri' },
+  { chi: '周六', eng: 'Saturday', simpleEng: 'Sat' }
 ];
 
 var reqHost = 'http://dev.im-cc.com:38880';
