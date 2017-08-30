@@ -1,7 +1,10 @@
 {
   "pages":[
-
+    "pages/act-detail/act-detail",
     "pages/timeLine/timeLine",
+    
+    "pages/voteModule/voteModule",
+    "pages/testModule/testModule",
     "pages/map/map",
     "pages/spot/spot",
     "pages/index/index",

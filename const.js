@@ -34,7 +34,15 @@ var APIS = {
   LOGIN: '/activity/login',
 
   GET_EVENT_TYPE_LIST: '/activity/eventType',
-  GET_EVENTS_LIST_BY_MONTH: '/activity/getEventListByMonth'
+  GET_EVENTS_LIST_BY_MONTH: '/activity/getEventListByMonth',
+  GET_EVENT_BASE: '/activity/getEventBase',
+  GET_EVENT_DETAIL: '/activity/getEventDetail',
+  TOGGLE_FOLLOW: '/activity/toggleFollow',
+  SIGN_UP: '/activity/signUp',
+  GET_VOTE_MODULE: '/activity/getVoteConfig',
+  ADD_VOTE: '/activity/addVote',
+  GET_TEST_MODULE: '/activity/getTestModule',
+  SUBMIT_QUESTION: '/activity/submitQuestion'
 }
 
 for (var i in APIS) {

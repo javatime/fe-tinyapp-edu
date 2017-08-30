@@ -32,5 +32,11 @@ module.exports = {
   // 导览详情，公交车icon
   icSpotBus: 'http://edu-1253427581.coscd.myqcloud.com/%E6%99%AF%E7%82%B9%E8%AF%A6%E6%83%85-%E5%85%AC%E4%BA%A4.png',
   // 导览详情，地铁icon
-  icSpotSubway: 'http://edu-1253427581.coscd.myqcloud.com/%E6%99%AF%E7%82%B9%E8%AF%A6%E6%83%85-%E5%9C%B0%E9%93%81.png'
+  icSpotSubway: 'http://edu-1253427581.coscd.myqcloud.com/%E6%99%AF%E7%82%B9%E8%AF%A6%E6%83%85-%E5%9C%B0%E9%93%81.png',
+  // 活动详情，投票icon
+  icActDetailVote: 'http://edu-1253427581.coscd.myqcloud.com/%E6%8A%95%E7%A5%A8.png',
+  // 活动详情，未关注icon
+  icActDetailUnfollowed: 'http://edu-1253427581.coscd.myqcloud.com/%E6%9C%AA%E5%85%B3%E6%B3%A8.png',
+  // 活动详情，已关注icon
+  icActDetailFollowed: 'http://edu-1253427581.coscd.myqcloud.com/%E5%B7%B2%E5%85%B3%E6%B3%A8.png'
 }
