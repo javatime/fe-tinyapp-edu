@@ -1,12 +1,12 @@
 // pages/demo/demo.js
-var obj = require('../../data/data.js');
+
 Page({
   
   /**
    * 页面的初始数据
    */
   data:{
-      list:obj.list
+      school:[]
   },
   onTap:function(option){
     var id = option.currentTarget.dataset.id;
@@ -41,14 +41,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    module.exports = this.data.school;
+    this.getmarkszb();
+  
+  },
+  getmarkszb: function () {
+    let that = this;
+    wx.request({
+      url: 'http://dev.im-cc.com:38880/cms/viewData/column_posts/2',
+      method: 'POST',
+      success: function (res) {
+        console.log(res.data.data)
+        that.setData({
+          school: res.data.data.list
+        });
+      }
+    });
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**

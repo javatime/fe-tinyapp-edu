@@ -23,5 +23,6 @@ image{
    margin:10rpx 37rpx;
    font-size: 16px;
    color: #585858;
-   line-height: 70rpx
+   line-height: 70rpx;
+   font-family: "Times New Roman"
 }
