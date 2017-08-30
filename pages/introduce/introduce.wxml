@@ -25,13 +25,13 @@
   <view class="cont">
     <view class="pro">历史沿革</view>
     <view class="pro-txt" >
-      <text class="txt {{collected1 ? 'show' : ''}}" catchtap="txt1Tap" >学校的前身是广州外国语学院和广州对外贸易学院。广州外国语学院于1964年11月设立、1965年7月正式招生，是原国家教委（现教育部）直属的三所著名</text>
+      <text class="txt {{collected1 ? 'show' : ''}}" catchtap="txt1Tap" >学校的前身是广...................州外国语学院和广州对外贸易学院。广州外国语学院于1964年11月设立、1965年7月正式招生，是原国家教委（现教育部）直属的三所著名</text>
     </view>
   </view>
   <view class="cont">
     <view class="pro">校区情况</view>
     <view class="pro-txt">
-      <text class="txt {{collected2 ? 'show' : ''}}" catchtap="txt2Tap">学校地处中国历史文化名城和华南地区经济中心广州，辖3个校区，总面积2292庙，其中北校区位于白云山北麓，占地939庙；成荫，小桥流水，鸟语花香</text>
+      <text class="txt {{collected2 ? 'show' : ''}}" catchtap="txt2Tap">学校地处中国历史文化名城和华南地区经济/////////////////中心广州，辖3个校区，总面积2292庙，其中北校区位于白云山北麓，占地939庙；成荫，小桥流水，鸟语花香</text>
     </view>
   </view>
 </view>

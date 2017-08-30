@@ -3,7 +3,7 @@ Page({
   data:{
     collected1:true,
     collected2:true,
-    id:[]
+    id:5
   },
   /**
    * 页面的初始数据
@@ -43,21 +43,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    module.exports = this.data.mymarkspo;
-    this.getmarkszb();
-  },
-  getmarkszb: function () {
-    let that = this;
-    wx.request({
-      url:'http://dev.im-cc.com:38880/cms/viewData/column_posts/5',
-      data: { id: 5 },
-      success: function (res) {
-        console.log(res)
-        that.setData({
-          mymarkspo: res.data
-        });
-      }
-    });
+   
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
