@@ -1,0 +1,20 @@
+
+<view class="container">
+    <view class="warp-outer">
+      <view class="warp">
+        <image class="img" src="/images/1.jpg"></image>
+      </view>
+      <text class="txt">朱晓明</text>
+      <view class="btn" catchtap="onTap">
+        <text>未认证</text>
+      </view>
+    </view>
+    <view class="content-one">
+        <text class="title">我的名片</text>
+        <image class="pic" src="/images/a.png" ></image>
+    </view>
+    <view class="content-two">
+        <text class="title">我的关注</text>
+        <image class="pic" src="/images/b.png" ></image>
+    </view>
+</view>
