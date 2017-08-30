@@ -1,7 +1,6 @@
 // pages/demo/demo-detial/demo-detial.js
 
 // 将数据文件引入到当前文件中
-var obj=require('../../data/history.js');
 
 // var myapp=getApp();
 // console.log(myapp.name);
@@ -12,7 +11,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+  list:[],
+  history:[]
   },
   
 
@@ -20,22 +20,134 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 当前图书的id号
-    var id=options.id;
-
-    // 当前小说对应的数据记录
-    var book=obj.list[id];
-
-    // 绑定数据
-    this.setData({
-      list:book,
+     // 当前的id号
+    var id = options.id;
+    module.exports = this.data.history;
+    console.log(id);
   
-    })
-
-    // 判断缓存中本文章是否被收藏
-  
+    if (id == 4) {
+      this.getmarkszb4();
+    } else if (id == 5) {
+      this.getmarkszb5();
+    } else if (id == 6) {
+      this.getmarkszb6();
+    } else if (id == 7) {
+      this.getmarkszb7();
+    } else if (id == 8) {
+      this.getmarkszb8();
+    } else if (id == 9) {
+      this.getmarkszb9();
+    }else{
+      this.getmarkszb10();
+    }
   },
 
+
+  getmarkszb4: function () {
+    let that = this;
+    wx.request({
+      url: 'http://dev.im-cc.com:38880/cms/post/detail/4',
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          history: res.data
+        })
+        that.show();
+      }
+    });
+  },
+  getmarkszb5: function () {
+    let that = this;
+    wx.request({
+      url: 'http://dev.im-cc.com:38880/cms/post/detail/5',
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          history: res.data
+        })
+        that.show();
+      }
+    });
+  },
+  getmarkszb6: function () {
+    let that = this;
+    wx.request({
+      url: 'http://dev.im-cc.com:38880/cms/post/detail/6',
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          history: res.data
+        })
+        that.show();
+      }
+    });
+  },
+  getmarkszb7: function () {
+    let that = this;
+    wx.request({
+      url: 'http://dev.im-cc.com:38880/cms/post/detail/7',
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          history: res.data
+        })
+        that.show();
+      }
+    });
+  },
+  getmarkszb8: function () {
+    let that = this;
+    wx.request({
+      url: 'http://dev.im-cc.com:38880/cms/post/detail/8',
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          history: res.data
+        })
+        that.show();
+      }
+    });
+  },
+  getmarkszb9: function () {
+    let that = this;
+    wx.request({
+      url: 'http://dev.im-cc.com:38880/cms/post/detail/9',
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          history: res.data
+        })
+        that.show();
+      }
+    });
+  },
+  getmarkszb10: function () {
+    let that = this;
+    wx.request({
+      url: 'http://dev.im-cc.com:38880/cms/post/detail/10',
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          history: res.data
+        })
+        that.show();
+      }
+    });
+  },
+  show:function () {
+    let that = this;
+    var detail = this.data.history;
+    that.setData({
+      list: detail
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

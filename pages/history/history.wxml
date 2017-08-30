@@ -19,9 +19,9 @@
        <scroll-view class="filter" scroll-x="true" style="width: 100%" scroll-left="{{scrollLeft}}">
           <block wx:for='{{history}}'>
             <view class="box" data-id="{{item.id}}" catchtap="onFilterTap">
-              <view class="img"><image src="/images/{{item.src}}">"></image></view>
+              <view class="img"><image src="{{item.headlineImage}}" /></view>
               <view class="time"><text>{{item.time}}</text></view>
-              <view class="des">{{item.tit}}</view>
+              <view class="des">{{item.title}}</view>
             </view>
           </block>
       </scroll-view>
@@ -31,7 +31,7 @@
       <text class=" all-school all-history" catchtap="famousTap">查看更多 ></text>
     </view>
     <import src="template/list.wxml"/>
-    <block wx:for='{{ list }}'>
+    <block wx:for='{{ famous }}'>
         <template is="mylist" data="{{ item }}"/>
     </block>
 

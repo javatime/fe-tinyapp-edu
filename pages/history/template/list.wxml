@@ -5,7 +5,7 @@
         <image src="/images/{{ item.src }}"></image>
     </view>  
     <view class="txt">
-      <view class="title"><text>{{ item.tit }}</text></view>
+      <view class="title"><text>{{ item.title }}</text></view>
       <view class="des"><text>{{ item.des }}</text></view>
     </view>
   </view>

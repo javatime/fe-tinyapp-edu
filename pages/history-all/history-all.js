@@ -1,8 +1,8 @@
 // pages/history-all/history-all.js
-var history = require('../../data/history.js');
+
 Page({
   data: {
-    history: history.list
+    history: [],
   },
 
   /**
@@ -20,8 +20,22 @@ Page({
    */
   onLoad: function (options) {
   
+    module.exports = this.data.history;
+    this.getmarkszb();
   },
-
+  getmarkszb: function () {
+    let that = this;
+    wx.request({
+      url: 'http://dev.im-cc.com:38880/cms/viewData/subcolumn_posts/8',
+      method: 'POST',
+      success: function (res) {
+        console.log(res.data.data.list[0])
+        that.setData({
+          history: res.data.data.list[0].posts,
+        });
+      }
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -1,9 +1,8 @@
-var famous = require('../../data/famous.js');
-var history = require('../../data/history.js');
+ 
 Page({
   data: {
-    list: famous.list,
-    history:history.list
+    history:[],
+    famous:[]
   },
   /**
    * 页面的初始数据
@@ -63,7 +62,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    module.exports = this.data.history;
+    module.exports = this.data.famous;
+    this.getmarkszb();
+  },
+  getmarkszb: function () {
+    let that = this;
+    wx.request({
+      url: 'http://dev.im-cc.com:38880/cms/viewData/subcolumn_posts/8',
+      method: 'POST',
+      success: function (res) {
+        console.log(res.data.data.list)
+        that.setData({
+          history: res.data.data.list[0].posts,
+          famous: res.data.data.list[1].posts,
+        });
+      }
+    });
   },
 
   /**

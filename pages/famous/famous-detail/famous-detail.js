@@ -1,7 +1,6 @@
-// pages/demo/demo-detial/demo-detial.js
+
 
 // 将数据文件引入到当前文件中
-var obj=require('../../../data/famous.js');
 
 // var myapp=getApp();
 // console.log(myapp.name);
@@ -12,7 +11,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    list: [],
+    famous:[]
   },
   
 
@@ -20,20 +20,102 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 当前图书的id号
-    var id=options.id;
+    var id = options.id;
+    module.exports = this.data.famous;
+    console.log(id);
 
-    // 当前小说对应的数据记录
-    var book=obj.list[id];
+    if (id == 11) {
+      this.getmarkszb11();
+    } else if (id == 12) {
+      this.getmarkszb12();
+    } else if (id == 13) {
+      this.getmarkszb13();
+    } else if (id == 14) {
+      this.getmarkszb14();
+    } else if (id == 15) {
+      this.getmarkszb15();
+    }else {
+      this.getmarkszb11();
+    }
+  },
 
-    // 绑定数据
-    this.setData({
-      list:book,
-      postid:id
+
+  getmarkszb11: function () {
+    let that = this;
+    wx.request({
+      url: 'http://dev.im-cc.com:38880/cms/post/detail/11',
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          famous: res.data
+        })
+        that.show();
+      }
+    });
+  },
+  getmarkszb12: function () {
+    let that = this;
+    wx.request({
+      url: 'http://dev.im-cc.com:38880/cms/post/detail/12',
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          famous: res.data
+        })
+        that.show();
+      }
+    });
+  },
+  getmarkszb13: function () {
+    let that = this;
+    wx.request({
+      url: 'http://dev.im-cc.com:38880/cms/post/detail/13',
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          famous: res.data
+        })
+        that.show();
+      }
+    });
+  },
+  getmarkszb14: function () {
+    let that = this;
+    wx.request({
+      url: 'http://dev.im-cc.com:38880/cms/post/detail/14',
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          famous: res.data
+        })
+        that.show();
+      }
+    });
+  },
+  getmarkszb15: function () {
+    let that = this;
+    wx.request({
+      url: 'http://dev.im-cc.com:38880/cms/post/detail/15',
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          history: res.data
+        })
+        that.show();
+      }
+    });
+  },
+  show: function () {
+    let that = this;
+    var detail = this.data.famous;
+    that.setData({
+      list: detail
     })
-
-    // 判断缓存中本文章是否被收藏
-  
   },
 
   /**
