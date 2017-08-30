@@ -1,0 +1,12 @@
+<!--pages/entry/entry.wxml-->
+<view class="con" style="background-image:url({{icEntryBg}});">
+  <navigator class="intro" url="../introduce/introduce">
+    <view class="pic intro-pic" style="background-image:url({{icEntryIntro}});"></view>
+  </navigator>
+  <navigator url="../map/map" class="nav">
+    <view class="pic nav-pic" style="background-image:url({{icEntryNav}});"></view>
+  </navigator>
+  <navigator url="../timeLine/timeLine" class="act">
+    <view class="pic act-pic" style="background-image:url({{icEntryAct}});"></view>
+  </navigator>
+</view>

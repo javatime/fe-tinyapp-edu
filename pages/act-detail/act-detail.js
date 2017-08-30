@@ -82,7 +82,7 @@ Page({
   onLoad: function(options){
 
     this.setData({
-      eventId: options.actId || 1,
+      eventId: options.actId || 0,
       fromShare: options.fromShare || 0
     });
 

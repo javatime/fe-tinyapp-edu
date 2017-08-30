@@ -12,6 +12,15 @@ module.exports = {
    *  (1) 全局颜色：ic + '功能描述'
    *  (2) page作用域颜色：ic + 'page名称' + '功能描述'
   */
+  // 首页－背景图片
+  icEntryBg: 'http://edu-1253427581.coscd.myqcloud.com/%E9%A6%96%E9%A1%B5%E8%83%8C%E6%99%AF.png',
+  // 首页－校园介绍图片
+  icEntryIntro: 'http://edu-1253427581.coscd.myqcloud.com/%E6%A0%A1%E5%9B%AD%E4%BB%8B%E7%BB%8D.png',
+  // 首页－逛逛校园图片
+  icEntryNav: 'http://edu-1253427581.coscd.myqcloud.com/%E9%80%9B%E9%80%9B%E6%A0%A1%E5%9B%AD.png',
+  // 首页－校园互动图片
+  icEntryAct: 'http://edu-1253427581.coscd.myqcloud.com/%E6%A0%A1%E5%9B%AD%E4%BA%92%E5%8A%A8.png',
+
   // 地图页-校区选择下拉icon
   icMapDownArrow: 'http://edu-1253427581.coscd.myqcloud.com/downarrow.png',
   // 地图页-校区选择上拉icon

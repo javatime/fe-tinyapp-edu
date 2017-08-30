@@ -1,6 +1,3 @@
 {
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#eeeff1",
-    "navigationBarTitleText": "活动列表",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "活动列表"
 }
