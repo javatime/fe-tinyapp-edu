@@ -16,12 +16,12 @@
           </view>
         </view>
 
-        <view class="func-voice-wrap">
+        <view class="func-voice-wrap" wx:if="{{spot.details.voice}}">
           <view class="voice-icon"></view>
           <text>语音导览</text>
         </view>
 
-        <view class="func-video-wrap">
+        <view class="func-video-wrap" wx:if="{{spot.details.video}}">
           <view class="video-icon"></view>
           <text>视频游览</text>
         </view>
@@ -45,7 +45,9 @@
           <view class="trans-sub">地铁1号线</view>
         </view>
       </view>
-      <view class="main-title" style="margin-top: 73rpx;">景点介绍</view>
-      <view class="main-desc">景点介绍景点介绍景点介绍景点介绍景点介绍景点介绍景点介绍景点介绍景点介绍景点介绍景点介绍景点介绍景点介绍景点介绍景点介绍景点介绍.</view>
+      <view class="main-title" style="margin-top: 73rpx;" wx:if="{{spot.details.text}}">景点介绍</view>
+      <view class="main-desc">
+        <rich-text nodes="{{spot.details.text}}"/>
+      </view>
     </view>
 </view>

@@ -9,11 +9,11 @@
     <block wx:if="{{subcolumnList.length > 0}}">
     <view class="warp-history">
       <text class="title">{{subcolumnList[0].columnName}}</text>
-      <text class="all-history" bindtap="onOpenMore" data-id="{{subcolumnList[0].columnId}}">查看全部 ></text>
+      <text class="all-history" bindtap="onOpenMore" data-id="{{subcolumnList[0].columnId}}" data-title="{{subcolumnList[0].columnName}}">查看全部 ></text>
     </view>
     <view class="lun">
        <scroll-view class="filter" scroll-x="true" style="width: 100%" scroll-left="{{scrollLeft}}">
-          <block wx:for='{{subcolumnList[0].posts}}'>
+          <block wx:for='{{subcolumnList[0].posts}}' wx:key="unique">
             <view class="box" data-id="{{item.id}}" bindtap="onOpenPostDetail">
               <view class="img"><image src="{{item.headlineImage}}" /></view>
               <view class="des">{{item.title}}</view>
@@ -25,7 +25,7 @@
     <block wx:for="{{subcolumnList}}" wx:key="unique" wx:for-index="oi" wx:for-item="c" wx:if="{{oi > 0}}">
     <view class="warp-school warp-history" >
       <text class="title">{{c.columnName}}</text>
-      <text class=" all-school all-history" catchtap="famousTap" bindtap="onOpenMore" data-id="{{c.columnId}}">查看更多 ></text>
+      <text class=" all-school all-history" catchtap="famousTap" bindtap="onOpenMore" data-id="{{c.columnId}}" data-title="{{c.columnName}}">查看更多 ></text>
     </view>
     <block wx:for="{{c.posts}}" wx:key="unique" wx:for-item="p">
       <view class="list" data-id="{{p.id}}" bindtap="onOpenPostDetail">

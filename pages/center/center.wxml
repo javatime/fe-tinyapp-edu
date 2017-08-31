@@ -1,20 +1,19 @@
-
 <view class="container">
-    <view class="warp-outer">
+    <view class="warp-outer" style="background-image: url({{icCenterBg}});">
       <view class="warp">
-        <image class="img" src="/images/1.jpg"></image>
+        <image class="img" src="{{avatarUrl}}" mode="aspectFill"></image>
       </view>
-      <text class="txt">朱晓明</text>
-      <view class="btn" catchtap="onTap">
-        <text>未认证</text>
-      </view>
+      <text class="txt">{{nickName}}</text>
     </view>
-    <view class="content-one">
-        <text class="title">我的名片</text>
-        <image class="pic" src="/images/a.png" ></image>
-    </view>
-    <view class="content-two">
+    <navigator hover-class="none" url="../my-signup-list/my-signup-list" class="content-one">
+        <text class="title">我的报名</text>
+        <view class="pic pic-signup"></view>
+    </navigator>
+    <navigator hover-class="none" url="../my-follow-list/my-follow-list" class="content-two">
         <text class="title">我的关注</text>
-        <image class="pic" src="/images/b.png" ></image>
-    </view>
+        <view class="pic pic-follow"></view>
+    </navigator>
 </view>
+
+<import src="../../templates/actFooter/actFooter.wxml"/>
+  <template is="actFooter" data="{{...footerData}}"></template>

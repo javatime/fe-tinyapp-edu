@@ -103,8 +103,9 @@ Page({
 
   onOpenMore: function(e) {
     var id = e.currentTarget.dataset.id;
+    var title = e.currentTarget.dataset.title;
     wx.navigateTo({
-      url: '../post-list/post-list?id=' + id + '&hideNav=true'
+      url: '../post-list/post-list?id=' + id + '&hideNav=true&title=' + title
     });
   },
 

@@ -1,4 +1,6 @@
 /**timeline.wxss**/
+@import "../../templates/actFooter/actFooter.wxss";
+
 page{
   position: fixed;
   overflow: hidden;
@@ -89,6 +91,7 @@ page{
   width: 750rpx;
   box-sizing: border-box;
   white-space: nowrap;
+  border-bottom: 1rpx solid #e5e5e5;
 }
 
 .time-container {
@@ -98,6 +101,7 @@ page{
   box-sizing: border-box;
   overflow-y: hidden;
   flex: 1;
+  margin-bottom: 86rpx;
 }
 .time-number {
   padding-top: 0;

@@ -17,8 +17,8 @@ Page({
 
     clrMain: theme.clrMain,
 
-    footerConfig: {
-      pageEvent: true
+    footerData: {
+      actListSelectedCls: 'act-list-selected'
     },
     year: 0,
     month: 0,

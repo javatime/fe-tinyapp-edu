@@ -1,20 +1,29 @@
-
+var app = getApp();
+var theme = app.getTheme();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    footerData: {
+      personalCenterSelectedCls: 'personal-center-selected'
+    },
 
+    icCenterBg: theme.icCenterBg,
+    nickName: '',
+    avatarUrl: ''
   },
-  onTap: function () {
-    
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var u = wx.getStorageSync('userInfo');
+    this.setData({
+      nickName: u.nickName,
+      avatarUrl: u.avatarUrl
+    });
   },
 
   /**

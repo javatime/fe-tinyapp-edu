@@ -1,12 +1,18 @@
 {
   "pages":[
-    
     "pages/entry/entry",
+
+    "pages/center/center",
+    "pages/timeLine/timeLine",
+
     "pages/post-detail/post-detail",
     "pages/post-column/post-column",
     "pages/post-list/post-list",
+
+    "pages/my-signup-list/my-signup-list",
+    "pages/my-follow-list/my-follow-list",
     
-    "pages/timeLine/timeLine",
+    
     "pages/act-detail/act-detail",
     "pages/voteModule/voteModule",
     "pages/testModule/testModule",

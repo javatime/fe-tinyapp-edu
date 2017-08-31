@@ -47,5 +47,7 @@ module.exports = {
   // 活动详情，未关注icon
   icActDetailUnfollowed: 'http://edu-1253427581.coscd.myqcloud.com/%E6%9C%AA%E5%85%B3%E6%B3%A8.png',
   // 活动详情，已关注icon
-  icActDetailFollowed: 'http://edu-1253427581.coscd.myqcloud.com/%E5%B7%B2%E5%85%B3%E6%B3%A8.png'
+  icActDetailFollowed: 'http://edu-1253427581.coscd.myqcloud.com/%E5%B7%B2%E5%85%B3%E6%B3%A8.png',
+  // 个人中心，背景图
+  icCenterBg: 'http://edu-1253427581.coscd.myqcloud.com/%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83%E8%83%8C%E6%99%AF.png'
 }

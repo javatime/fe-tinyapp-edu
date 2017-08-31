@@ -43,11 +43,12 @@ var APIS = {
   ADD_VOTE: '/activity/addVote',
   GET_TEST_MODULE: '/activity/getTestModule',
   SUBMIT_QUESTION: '/activity/submitQuestion',
+  GET_MY_FOLLOW_LIST: '/activity/getMyFollowList',
+  GET_MY_SIGNUP_LIST: '/activity/getMySignUpList',
 
   TOP_COLUMNS: '/cms/viewOption/topColumns',
   VIEWDATA_POST: '/cms/viewData/post/${id}',
   POST_DETAIL: '/cms/post/detail/${id}',
-
   VIEWDATA_COLUMN_POSTS: '/cms/viewData/column_posts/${id}',
   POST_LIST: '/cms/post/list',
   VIEWDATA_SUBCOLUMN_POSTS: '/cms/viewData/subcolumn_posts/${id}'

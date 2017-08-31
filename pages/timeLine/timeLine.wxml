@@ -57,6 +57,9 @@
 
 </view>
 
+<import src="../../templates/actFooter/actFooter.wxml"/>
+  <template is="actFooter" data="{{...footerData}}"></template>
+
 <!--底部导航-->
 <!--
 <import src="../footer/footer.wxml" />

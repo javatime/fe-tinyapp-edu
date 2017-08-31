@@ -42,6 +42,8 @@ Page({
   onLoad: function (options) {
     var that = this;
 
+    this.tmpIcon = {};
+
     // 页面初始化 options为页面跳转所带来的参数
     this.map = wx.createMapContext('map');
 
@@ -225,8 +227,10 @@ Page({
     var campusId = this.data.campus[campusIndex].id
     var typeIndex = this.data.selectedTypeIndex;
     var typeId = this.data.types[typeIndex].id;
+    var markImg = this.data.types[typeIndex].markImg;
     var campusData = this.campusData[campusId];
     var filteredSpots = [];
+    var that = this;
     for (var i = 0, j = campusData.length; i < j; i++) {
       if (campusData[i].typeId == typeId) {
         filteredSpots = campusData[i].spots;
@@ -234,12 +238,28 @@ Page({
       }
     }
 
-    var retMarkers = filteredSpots.map(function (m, i) {
+    // 未下载
+    if (!this.tmpIcon[typeId]) {
+      wx.downloadFile({
+        url: markImg,
+        success: function(res) {
+          that.tmpIcon[typeId] = res.tempFilePath;
+          that.setMarkersByIcon(filteredSpots, that.tmpIcon[typeId]);
+        }
+      })
+    // 已下载
+    } else {
+      this.setMarkersByIcon(filteredSpots, this.tmpIcon[typeId]);
+    }
+  },
+
+  setMarkersByIcon: function(spots, icon) {
+    var retMarkers = spots.map(function (m, i) {
       m.longitude = +m.longitude;
       m.latitude = +m.latitude;
       m.width = 30;
       m.height = 30;
-      m.iconPath = theme.icMapMyLocation;
+      m.iconPath = icon;
       m.id = m.id;
       return m;
     });
