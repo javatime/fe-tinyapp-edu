@@ -14,7 +14,7 @@ page {
   box-sizing: border-box;
 }
 
-navigator {
+.navigator {
   width: 554rpx;
   height: 209rpx;
   margin: auto;

@@ -1,7 +1,10 @@
 {
   "pages":[
-
+    
     "pages/entry/entry",
+    "pages/post-detail/post-detail",
+    "pages/post-column/post-column",
+    "pages/post-list/post-list",
     
     "pages/timeLine/timeLine",
     "pages/act-detail/act-detail",
@@ -13,7 +16,7 @@
     "pages/introduce/introduce",
     "pages/school/school",
     "pages/school/template/list",
-    "pages/school-detail/school-detail" ,
+    "pages/school-detail/school-detail",
     "pages/history/history",
     "pages/history/template/list",
     "pages/history-all/history-all",
