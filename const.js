@@ -23,6 +23,7 @@ var dayFormatList = [
   { chi: '周六', eng: 'Saturday', simpleEng: 'Sat' }
 ];
 
+//var reqHost = 'https://uccuat.im-cc.com/xiaochengxu';
 var reqHost = 'http://dev.im-cc.com:38880';
 
 var APIS = {
@@ -45,6 +46,8 @@ var APIS = {
   SUBMIT_QUESTION: '/activity/submitQuestion',
   GET_MY_FOLLOW_LIST: '/activity/getMyFollowList',
   GET_MY_SIGNUP_LIST: '/activity/getMySignUpList',
+  GET_EVENT_POSTER: '/activity/getEventPoster',
+  GET_EVENT_QRCODE: '/activity/getEventQrCode',
 
   TOP_COLUMNS: '/cms/viewOption/topColumns',
   VIEWDATA_POST: '/cms/viewData/post/${id}',

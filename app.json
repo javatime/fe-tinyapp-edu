@@ -1,7 +1,7 @@
 {
   "pages":[
     "pages/entry/entry",
-
+    "pages/map/map",
     "pages/center/center",
     "pages/timeLine/timeLine",
 
@@ -9,15 +9,19 @@
     "pages/post-column/post-column",
     "pages/post-list/post-list",
 
+    "pages/act-poster/act-poster",
+    "pages/act-detail/act-detail",
+    "pages/act-qrcode/act-qrcode",
+
     "pages/my-signup-list/my-signup-list",
     "pages/my-follow-list/my-follow-list",
-    
-    
-    "pages/act-detail/act-detail",
+  
     "pages/voteModule/voteModule",
     "pages/testModule/testModule",
-    "pages/map/map",
+    
     "pages/spot/spot",
+    "pages/video/video",
+
     "pages/index/index",
     "pages/introduce/introduce",
     "pages/school/school",

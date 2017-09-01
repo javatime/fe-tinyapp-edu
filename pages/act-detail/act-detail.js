@@ -82,7 +82,7 @@ Page({
   onLoad: function(options){
 
     this.setData({
-      eventId: options.actId || 0,
+      eventId: options.actId || 1,
       fromShare: options.fromShare || 0
     });
 
@@ -344,12 +344,12 @@ Page({
     // 用户点击右上角分享
     var path = '';
     if (this.data.poster) {
-      path = '/pages/eventPoster/eventPoster';
+      path = '/pages/act-poster/act-poster';
     } else {
-      path = '/pages/detail/detail';
+      path = '/pages/act-detail/act-detail';
     }
     return {
-      title: '广东外语外贸大学-' + this.data.eventName, // 分享描述
+      title: this.data.eventName, // 分享描述
       path: path + '?eventId=' + this.data.eventId + '&eventName=' + this.data.eventName + '&fromShare=1' // 分享路径
     }
   },

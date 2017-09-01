@@ -38,12 +38,16 @@ swiper {
 .title-box-right{
   line-height: 70rpx;
   padding:0 40rpx;
+  display: flex;
+  flex-direction: row;
 }
 .title-box-right .right1{
   font-weight: bold;
   font-size: 42rpx;
   color: #333;
   margin-bottom: 10rpx;
+  flex: 1;
+  margin-right: 20rpx;
 }
 
 .mg20{
@@ -96,10 +100,10 @@ swiper {
   color:#5d5f6a;
   padding:0 40rpx;
   width: 100%;
+  box-sizing: border-box;
 }
 .model-right .right1{
   font-size: 32rpx;
-  height: 40rpx;
   line-height: 40rpx;
 }
 .model-right .right2{
@@ -550,4 +554,13 @@ top:10rpx;
   font-size: 28rpx;
   color: #666666;
   line-height: 1.8;
+}
+
+.qrcode-icon {
+  width: 40rpx;
+  height: 40rpx;
+  background-image: url(http://edu-1253427581.coscd.myqcloud.com/qrcode.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-top: 10rpx;
 }

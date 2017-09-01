@@ -52,7 +52,7 @@ function request(obj, needLogin = true, ctx) {
         }
     };
     obj.fail = function(res) {
-        typeof obj.realFail == "function" && obj.realFail('数据获取失败！');
+        typeof obj.realFail == "function" && obj.realFail(res.errMsg);
     };
     wx.request(obj);
 }

@@ -16,14 +16,15 @@
           </view>
         </view>
 
-        <view class="func-voice-wrap" wx:if="{{spot.details.voice}}">
+        <view class="func-voice-wrap" wx:if="{{spot.details.voice}}" bindtap="onToggleAudio">
           <view class="voice-icon"></view>
-          <text>语音导览</text>
+          <text>{{voiceTips}}</text>
+          <audio src="{{spot.details.voice}}" id="spotAudio"></audio>
         </view>
 
-        <view class="func-video-wrap" wx:if="{{spot.details.video}}">
+        <view class="func-video-wrap" wx:if="{{spot.details.video}}" bindtap="onPlayVideo" data-video="{{spot.details.video}}">
           <view class="video-icon"></view>
-          <text>视频游览</text>
+          <text>{{videoTips}}</text>
         </view>
 
       </view>

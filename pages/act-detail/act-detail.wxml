@@ -18,6 +18,7 @@
 
       <view class="title-box-right">
         <view class="right1">{{eventName}}</view>
+        <navigator url="../act-qrcode/act-qrcode?eventId={{eventId}}&eventName={{eventName}}" class="qrcode-icon"></navigator>
       </view>
       <view wx:if="{{fromShare == 1}}" class="go-to-home-wrap">
         <navigator url="../timeLine/timeLine" open-type="redirect">

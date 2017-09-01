@@ -15,7 +15,10 @@ Page({
     icSpotStar: theme.icSpotStar,
     icSpotBus: theme.icSpotBus,
     icSpotSubway: theme.icSpotSubway,
-    spot: {}
+    spot: {},
+
+    voiceTips: '语音导览',
+    videoTips: '视频导览'
   },
 
   /**
@@ -24,6 +27,8 @@ Page({
   onLoad: function (options) {
     var spotId = options.id;
     this.getSpotDetail(spotId);
+    this.isPlayingVoice = false;
+    this.isPlayingVideo = false;
   },
 
   getSpotDetail: function(spotId) {
@@ -54,5 +59,31 @@ Page({
       name: spot.name,
       address: spot.address
     });
+  },
+
+  onToggleAudio: function() {
+    if (!this.audioCtx) {
+      this.audioCtx = wx.createAudioContext('spotAudio');
+    }
+    if (!this.isPlayingVoice) {
+      this.audioCtx.play();
+      this.isPlayingVoice = true;
+      this.setData({
+        voiceTips: '播放中...'
+      });
+    } else {
+      this.audioCtx.pause();
+      this.isPlayingVoice = false;
+      this.setData({
+        voiceTips: '语音导览'
+      });
+    }
+  },
+
+  onPlayVideo: function(e) {
+    var url = e.currentTarget.dataset.video;
+    wx.navigateTo({
+      url: '../video/video?src=' + url,
+    })
   }
 })
