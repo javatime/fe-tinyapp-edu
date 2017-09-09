@@ -22,6 +22,8 @@
     </view>
 </scroll-view>
 
+<view class="time-line-outer">
+
 <scroll-view class="time-line-container" scroll-y="true" scroll-into-view="{{scrollIntoViewId}}" scroll-with-animation="{{verticalScrollAnim}}" bindscroll="{{onBindScroll}}" bindscrolltoupper="onHitTop" style="padding-bottom:{{listPaddingBottom}}rpx">
 
 
@@ -54,6 +56,8 @@
 </view>
 
 </scroll-view> 
+
+</view>
 
 </view>
 
@@ -92,7 +96,7 @@
   <scroll-view scroll-x="true" class="type-list">
 
     <block wx:for="{{eventTypeList}}" wx:key="unique">
-      <view wx:if="{{index == eventTypeIndex}}" class="type-list-item" style="color: {{clrMain}};border: 1rpx solid {{clrMain}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="onSelectedType">{{item.typeName}}</view>
+      <view wx:if="{{index == eventTypeIndex}}" class="type-list-item" style="color: {{clrMain}};border: 2rpx solid {{clrMain}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="onSelectedType">{{item.typeName}}</view>
       <view wx:else class="type-list-item" data-id="{{item.id}}" data-index="{{index}}" bindtap="onSelectedType">{{item.typeName}}</view>
     </block>
   </scroll-view>

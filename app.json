@@ -21,6 +21,7 @@
     
     "pages/spot/spot",
     "pages/video/video",
+    "pages/navigate/navigate",
 
     "pages/index/index",
     "pages/introduce/introduce",

@@ -89,7 +89,7 @@ Page({
     } else if (valueType == 'POST') {
       url = '../post-detail/post-detail';
       // 活动页面
-    } else if (valueType == 'ACT') {
+    } else if (valueType == 'ACTIVITY') {
       wx.navigateTo({
         url: '../timeLine/timeLine'
       });
@@ -105,14 +105,14 @@ Page({
     var id = e.currentTarget.dataset.id;
     var title = e.currentTarget.dataset.title;
     wx.navigateTo({
-      url: '../post-list/post-list?id=' + id + '&hideNav=true&title=' + title
+      url: '../post-list/post-list?id=' + id + '&hideNav=true&title=' + title + '&topId=' + this.data.tplData.columnId
     });
   },
 
   onOpenPostDetail: function(e) {
     var id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '../post-detail/post-detail?id=' + id + '&hideNav=true&isPost=true'
+      url: '../post-detail/post-detail?id=' + id + '&hideNav=true&isPost=true&topId=' + this.data.tplData.columnId
     });
   }
 })

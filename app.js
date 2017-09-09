@@ -28,11 +28,13 @@ App({
         topColumns.sort(function(a, b) {
           return a.sort - b.sort;
         });
+        /*
         topColumns.push({
           id: '-1',
           valueType: 'ACT',
           viewName: '活动'
         });
+        */
         that.topColumns = topColumns;
       },
       realFail: function(msg) {

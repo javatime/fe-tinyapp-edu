@@ -23,8 +23,9 @@ var dayFormatList = [
   { chi: '周六', eng: 'Saturday', simpleEng: 'Sat' }
 ];
 
-//var reqHost = 'https://uccuat.im-cc.com/xiaochengxu';
-var reqHost = 'http://dev.im-cc.com:38880';
+//var reqHost = 'https://xiaochengxu.im-cc.com';
+var reqHost = 'https://microcloudtech.com';
+//var reqHost = 'http://dev.im-cc.com:38880';
 
 var APIS = {
   GET_NAV_TYPE: '/nav/type',
@@ -63,8 +64,13 @@ for (var i in APIS) {
   }
 }
 
+var config = {
+  mapkey: '52d76099cd5124c5e891ec8df55cc2d3'
+}
+
 module.exports = {
   monthFormatList: monthFormatList,
   dayFormatList: dayFormatList,
-  APIS: APIS
+  APIS: APIS,
+  config: config
 }

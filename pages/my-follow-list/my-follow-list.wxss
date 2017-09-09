@@ -100,7 +100,7 @@ page{
   box-sizing: border-box;
   overflow-y: hidden;
   flex: 1;
-  margin-bottom: 86rpx;
+  height: 100%;
 }
 .time-number {
   padding-top: 0;

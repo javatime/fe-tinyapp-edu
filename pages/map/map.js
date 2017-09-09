@@ -245,6 +245,12 @@ Page({
         success: function(res) {
           that.tmpIcon[typeId] = res.tempFilePath;
           that.setMarkersByIcon(filteredSpots, that.tmpIcon[typeId]);
+        },
+        fail: function(res) {
+          wx.showModal({
+            title: '',
+            content: res.errMsg,
+          })
         }
       })
     // 已下载

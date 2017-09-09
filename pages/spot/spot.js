@@ -53,12 +53,17 @@ Page({
 
   gotoNav: function() {
     var spot = this.data.spot;
+    /*
     wx.openLocation({
       longitude: spot.longitude,
       latitude: spot.latitude,
       name: spot.name,
       address: spot.address
     });
+    */
+    wx.navigateTo({
+      url: '../navigate/navigate?lati=' + spot.latitude + '&long=' + spot.longitude + '&name=' + spot.name
+    })
   },
 
   onToggleAudio: function() {

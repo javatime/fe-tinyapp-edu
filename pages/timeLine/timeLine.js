@@ -66,18 +66,17 @@ Page({
     });
 
     // 处理兼容性
-    /*
     var sysInfo = wx.getSystemInfoSync();
     if (sysInfo.system.toUpperCase().indexOf('IOS') != -1) {
       this.setData({
-        listPaddingBottom: 150
+        listPaddingBottom: 310
       });
-    } 
-    */   
+    }
+
+    user.login(this.renderUI, this, true);
   },
 
   onShow: function() {
-    user.login(this.renderUI, this, true);
   },
 
   renderUI: function () {

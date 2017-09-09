@@ -31,6 +31,7 @@ Page({
     this.setData({
       "tplData.topColumns": app.topColumns,
       "tplData.columnId": options.id,
+      "tplData.topId": options.topId || options.id,
       "tplData.viewId": 'J_type',
       hideNav: options.hideNav || false,
       marginTop: options.hideNav ? '0': '100rpx'
@@ -63,8 +64,16 @@ Page({
 
   getPostList: function() {
     var that = this;
+    var url = '';
+    if (this.data.hideNav) {
+      url = APIS.POST_LIST + '?id=' + this.data.columnId;
+    } else {
+      url = substitute(APIS.VIEWDATA_COLUMN_POSTS, {
+        id: this.data.columnId
+      }, this);
+    }
     request({
-      url: APIS.POST_LIST + '?id=' + this.data.columnId,
+      url: url,
       method: 'POST',
       realSuccess: function (data) {
         that.setData({
@@ -82,7 +91,7 @@ Page({
   gotoPostDetail: function(e) {
     var id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '../post-detail/post-detail?id=' + id + '&hideNav=true&isPost=true',
+      url: '../post-detail/post-detail?id=' + id + '&hideNav=true&isPost=true&topId=' + this.data.tplData.topId,
     })
   },
 
@@ -101,7 +110,7 @@ Page({
     } else if (valueType == 'POST') {
       url = '../post-detail/post-detail';
       // 活动页面
-    } else if (valueType == 'ACT') {
+    } else if (valueType == 'ACTIVITY') {
       wx.navigateTo({
         url: '../timeLine/timeLine'
       });

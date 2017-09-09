@@ -32,6 +32,7 @@ Page({
     this.setData({
       "tplData.topColumns": app.topColumns,
       "tplData.columnId": options.id,
+      "tplData.topId": options.topId || options.id,
       "tplData.viewId": 'J_type',
       hideNav: options.hideNav || false,
       isPost: options.isPost || false,
@@ -75,11 +76,14 @@ Page({
       id: this.data.columnId
     }, this);
     request({
-      url: url,
+      url: url + '?topColumnId=' + this.data.tplData.topId,
       method: 'POST',
+      /*
       data: {
-        id: this.data.columnId
+        id: this.data.columnId,
+        topColumnId: this.data.tplData.topId
       },
+      */
       realSuccess: function(data) {
         that.setData({
           postDetail: data
@@ -107,7 +111,7 @@ Page({
     } else if (valueType == 'POST') {
       url = '../post-detail/post-detail';
       // 活动页面
-    } else if (valueType == 'ACT') {
+    } else if (valueType == 'ACTIVITY') {
       wx.navigateTo({
         url: '../timeLine/timeLine'
       });

@@ -74,10 +74,10 @@ Page({
       });
     } 
     */
+    user.login(this.renderUI, this, true);
   },
 
   onShow: function () {
-    user.login(this.renderUI, this, true);
   },
 
   renderUI: function () {
