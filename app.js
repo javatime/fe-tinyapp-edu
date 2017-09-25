@@ -1,7 +1,7 @@
 //app.js
 var { APIS } = require('./const.js');
 var { request } = require('./libs/request');
-var theme = require('./themes/default.js');
+var theme = require('./themes/bjshida.js');
 
 App({
   onLaunch: function() {

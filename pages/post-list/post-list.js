@@ -98,7 +98,6 @@ Page({
   onClickTopNav: function (e) {
     var columnId = e.currentTarget.dataset.id;
     var valueType = e.currentTarget.dataset.type;
-    console.log(e.currentTarget.dataset)
     var url = '';
     // 跳转到文章列表页
     if (valueType == 'COLUMN_POSTS') {
@@ -120,5 +119,7 @@ Page({
     wx.redirectTo({
       url: url
     });
-  }
+  },
+
+  onShareAppMessage: function () { }
 })

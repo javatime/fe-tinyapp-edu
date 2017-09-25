@@ -39,10 +39,9 @@ Page({
     var key = config.mapkey;
     var myAmapFun = new amapFile.AMapWX({ key: key });
     var mapheigh = wx.getSystemInfoSync().windowHeight - 120;
-    wx.showToast({
+    wx.showLoading({
       title: '加载中',
-      icon: 'loading',
-      //duration: 4000
+      icon: 'loading'
     })
     that.setData({
       mapHeight: mapheigh,
@@ -116,6 +115,8 @@ Page({
                 cost: '打车约' + parseInt(data.taxi_cost) + '元'
               });
             }
+
+            wx.hideLoading();
 
           }
         })
@@ -194,6 +195,7 @@ Page({
             cost: '打车约' + parseInt(data.taxi_cost) + '元'
           });
         }
+        wx.hideLoading();
       }
     })
   },
@@ -245,6 +247,7 @@ Page({
             cost: parseInt(data.paths[0].duration / 60) + '分钟'
           });
         }
+        wx.hideLoading();
       },
       fail: function (info) {
         wx.showToast({
@@ -294,6 +297,7 @@ Page({
         that.setData({
           transits: transits
         });
+        wx.hideLoading();
       },
       fail: function (info) {
         wx.showToast({
@@ -352,6 +356,7 @@ Page({
             cost: '打车约' + parseInt(data.taxi_cost) + '元'
           });
         }
+        wx.hideLoading();
       },
       fail: function (info) {
         wx.showToast({

@@ -12,7 +12,8 @@ Page({
 
     icCenterBg: theme.icCenterBg,
     nickName: '',
-    avatarUrl: ''
+    avatarUrl: '',
+    clrMain: theme.clrMain
   },
 
   /**

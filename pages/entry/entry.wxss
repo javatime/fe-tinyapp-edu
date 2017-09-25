@@ -10,20 +10,21 @@ page {
   height: 100%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding-top: 220rpx;
+  /* padding-top: 220rpx; */
+   padding-top: 150rpx; 
   box-sizing: border-box;
 }
 
 .navigator {
   width: 554rpx;
-  height: 209rpx;
+  height: 190rpx;
   margin: auto;
   margin-bottom: 28rpx;
 }
 
 .pic {
   width: 554rpx;
-  height: 209rpx;
+  height: 190rpx;
   background-size: 100%;
   background-repeat: no-repeat;
 }

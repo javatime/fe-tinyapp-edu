@@ -35,11 +35,12 @@
     "pages/famous/famous",
     "pages/famous/template/list",
     "pages/famous/famous-detail/famous-detail",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/search/search"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#004986",
+    "navigationBarBackgroundColor": "#0e419c",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"white"
   }

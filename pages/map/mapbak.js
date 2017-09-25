@@ -3,8 +3,8 @@
 // var polylineData = require('../../data/polyline');
 Page({
   data: {
-    centerLongitude: '114.362800',
-    centerLatitude: '30.537800',
+    centerLongitude: '116.365880',
+    centerLatitude: '39.961680',
     selects: [true, false, false ,false ,false, false, false, false],
     markers: [],
     polyline: [],
@@ -21,8 +21,8 @@ Page({
   onLoad:function(options){
 
     this.pathMarker = {
-      "latitude":30.539615,
-      "longitude":114.365042,
+      "latitude": 39.961680,
+      "longitude": 116.365880,
       iconPath: '/resources/pathMarker.png',
       width: 75,
       height: 30
@@ -99,13 +99,13 @@ Page({
     if (controlId == 0) {
       if (this.data.centerLongitude == '114.362800') {
         this.setData({
-          centerLongitude: '114.362801',
-          centerLatitude: '30.537801',
+          centerLongitude: '116.365880',
+          centerLatitude: '39.961680',
         });
       } else {
         this.setData({
-          centerLongitude: '114.362800',
-          centerLatitude: '30.537800',
+          centerLongitude: '116.365880',
+          centerLatitude: '39.961680',
         });
       }
       this.showMarkers('yinghua');

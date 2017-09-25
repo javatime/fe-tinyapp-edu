@@ -22,7 +22,12 @@ Page({
     isPost: false,
     postDetail: {},
     hideNav: true,
-    marginTop: '0'
+    marginTop: '0',
+    imageUrls:[],
+    autoplay:true,
+    interval:4000,
+    duration:1100,
+    color:'white'
   },
 
   /**
@@ -85,6 +90,7 @@ Page({
       },
       */
       realSuccess: function(data) {
+        console.log(data)
         that.setData({
           postDetail: data
         });
@@ -121,5 +127,7 @@ Page({
     wx.redirectTo({
       url: url
     });
-  }
+  },
+
+  onShareAppMessage: function () { }
 })
