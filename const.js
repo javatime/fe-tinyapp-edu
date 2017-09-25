@@ -24,7 +24,7 @@ var dayFormatList = [
 ];
 
 //var reqHost = 'https://xiaochengxu.im-cc.com';
-var reqHost = 'https://microcloudtech.com';
+var reqHost = 'https://microcloudtech.com/gateway/bjshida';
 //var reqHost = 'http://dev.im-cc.com:38880';
 
 var APIS = {

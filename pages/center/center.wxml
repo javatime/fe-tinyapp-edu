@@ -1,6 +1,6 @@
 <view class="container">
     <view class="warp-outer" style="background-image: url({{icCenterBg}});">
-      <view class="warp">
+      <view class="warp" style="background-color:{{clrMain}};">
         <image class="img" src="{{avatarUrl}}" mode="aspectFill"></image>
       </view>
       <text class="txt">{{nickName}}</text>

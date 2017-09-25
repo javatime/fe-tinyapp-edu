@@ -27,7 +27,7 @@
       
     </scroll-view>
   </view>
-  <view class="map-wrap">
+  <view class="map-wrap" style="height:{{mapHeight}}px;">
     <map 
             class="map"
             id="map" 
@@ -41,6 +41,37 @@
             polyline="{{polyline}}" 
             bindregionchange="regionchange" 
             show-location
-    ></map>
+    style="height:{{mapHeight}}px;"></map>
   </view>
+  <view class="list-tab" bindtap="showList">
+    <text style="color:{{clrMain}};">{{types.length>0?'共有'+markers.length+'个'+types[selectedTypeIndex].name:''}}</text>
+    <image class="up" src="{{upImage}}"></image>
+  </view>
+  <scroll-view class="photo-list" scroll-y="true" style="height:{{showList}}px;" scroll-top="{{listTop}}" scroll-into-view="m_{{selectedItemId}}">
+    <block wx:for="{{markers}}" wx:for-item="marker" wx:for-index="i" wx:key="id">
+      <view class="list-item-wrap {{marker.id == selectedItemId ? 'item-selected' : ''}}" id="m_{{marker.id}}">
+        <view class="item {{ i>=typeCount?'hidden':'' }}">
+          <view class="item-left" bindtap="onGotoDetail" data-id="{{marker.id}}" data-desc="{{marker.description.length+marker.traffic.length}}" data-url="../detail/detail?id={{marker.id}}&type={{ currentType }}&area={{area}}">
+            <view class="photo">
+              <image class="item-image" src="{{ marker.image }}"></image>
+            </view>
+            <view class="right">
+              <view class="name-outer">
+                <text class="name">{{marker.name}}</text>
+              </view>
+              <view wx:if="{{marker.address.length > 0}}" class="item-add-wrap">
+                <view class="center-loc"><image class="icon1" src="http://edu-1253427581.coscd.myqcloud.com/%E6%99%AF%E7%82%B9%E8%AF%A6%E6%83%85%E5%9D%90%E6%A0%87.png"></image></view>
+                <view class="center-address"><text class="address">{{marker.address}}</text></view>
+              </view>
+            </view>
+          </view>
+          <view class="right float-right">
+            <navigator url="../navigate/navigate?lati={{marker.latitude}}&long={{marker.longitude}}&type={{currentType}}&name={{marker.slogan}}&id={{marker.id}}">
+              <image class="goto" src="{{icSpotToNav}}"></image>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
 </view>
